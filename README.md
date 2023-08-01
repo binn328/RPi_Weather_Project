@@ -53,6 +53,8 @@ tmux를 사용하면 터미널을 닫아도 동작합니다.
 ```bash
 tmux
 python3 weather_rpi.py
+Ctrl + B
+D
 ```
 
 이후 해당 명령어를 통해 tmux 터미널에 접근할 수 있습니다.
