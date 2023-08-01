@@ -159,4 +159,4 @@ if __name__=="__main__":
             run()
         finally:
             print("Error 발생, 재시작")
-            run()
+            pass

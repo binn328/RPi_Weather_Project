@@ -52,10 +52,13 @@ class Weather:
         if(minute >= 00 and minute < 45):
             # 1시간 전 시간으로 설정하고 시간 가져오기
             self.now = datetime.datetime.now() - datetime.timedelta(hours=1)
-            hour = str(self.now.hour)
+            hour = self.now.hour
+            if(hour < 10):
+                hour = "0" + str(hour)
             minute = str(30)
         else:
-            hour = str(hour)
+            if(hour < 10):
+                hour = "0" + str(hour)
             minute = str(30)
 
         time = hour + minute
