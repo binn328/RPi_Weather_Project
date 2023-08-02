@@ -61,7 +61,7 @@ class Weather:
                 hour = "0" + str(hour)
             minute = str(30)
 
-        time = hour + minute
+        time = str(hour) + str(minute)
         date = self.now.strftime("%Y%m%d")
 
         return (date, time)

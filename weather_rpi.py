@@ -139,14 +139,15 @@ def run():
         else:
             GPIO.output(rgb_b, GPIO.HIGH)
         
-        # 1시간 대기하기 
-        time.sleep(3600)
             
         # 00시면 백라이트끄고 8시면 백라이트 켜기
         if(today.hour == 0):
             lcd.backlight(False)
         elif(today.hour == 8):
             lcd.backlight(True)
+   
+        # 1시간 대기하기 
+        time.sleep(3600)
     
         
   
@@ -157,6 +158,7 @@ if __name__=="__main__":
     while True:
         try:
             run()
-        finally:
+        except Exception as e:
             print("Error 발생, 재시작")
+            print(e)
             pass
